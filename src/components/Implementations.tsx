@@ -36,7 +36,7 @@ export default function Implementations({ ratingSystem }: { ratingSystem: Rating
             <div>
                 <div className="p-4 bg-white rounded-lg md:p-8 dark:bg-gray-800" id="services" role="tabpanel" aria-labelledby="services-tab">
                     <h2 className="mb-5 text-2xl font-extrabold tracking-tight text-gray-900 dark:text-white">{}</h2>
-                    <ul role="list" className="space-y-4 text-gray-500 dark:text-gray-400">
+                    <ul className="space-y-4 text-gray-500 dark:text-gray-400">
                         {implementations.map(implementation => {
                             return (
                                 <li className="flex space-x-2" key={implementation.title + implementation.title}>
