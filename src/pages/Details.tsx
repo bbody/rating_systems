@@ -1,8 +1,8 @@
-import React, { Fragment } from "react"
+import React from "react"
 import { useParams } from "react-router-dom";
 import Heading from "../components/Heading";
 import Implementations from "../components/Implementations";
-import { ratingSystemsMap, ratingSystemsList } from "../data/rating_systems"
+import { ratingSystemsMap } from "../data/rating_systems"
 import NotFound from "./NotFound";
 
 export default function Details() {

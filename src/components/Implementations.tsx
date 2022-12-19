@@ -40,7 +40,7 @@ export default function Implementations({ ratingSystem }: { ratingSystem: Rating
                         {implementations.map(implementation => {
                             return (
                                 <li className="flex space-x-2" key={implementation.title + implementation.title}>
-                                    <a href={implementation.link} target="_blank">
+                                    <a href={implementation.link} target="_blank" rel="noreferrer">
                                         <span className="font-light leading-tight">{implementation.title}</span>
                                     </a>
                                 </li>        

@@ -2,7 +2,7 @@ import React, { Fragment } from "react"
 import { useSearchParams } from "react-router-dom"
 import SearchSummary from "../components/SearchSummary"
 import Table from "../components/Table"
-import { getRatingSystemsByLanguage, ratingSystemsList } from '../data/rating_systems';
+import { getRatingSystemsByLanguage } from '../data/rating_systems';
 
 export default function List() {
     const [searchParams] = useSearchParams()
