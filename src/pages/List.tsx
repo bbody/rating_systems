@@ -11,8 +11,8 @@ export default function List() {
 
     return (
         <Fragment>
-            <SearchSummary/>
-            <Table ratingSystems={ratingSystems}/>
+            <SearchSummary />
+            <Table ratingSystems={ratingSystems} />
         </Fragment>
     )
 }

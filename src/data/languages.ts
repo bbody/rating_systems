@@ -46,6 +46,30 @@ export const Rust: Language = {
     icon: "rust",
 }
 
+export const CSharp: Language = {
+    title: "C#",
+    stub: "csharp",
+    icon: "csharp",
+}
+
+export const Kotlin: Language = {
+    title: "Kotlin",
+    stub: "kotlin",
+    icon: "kotlin",
+}
+
+export const Elixir: Language = {
+    title: "Elixir",
+    stub: "elixir",
+    icon: "elixir",
+}
+
+export const Lua: Language = {
+    title: "Lua",
+    stub: "lua",
+    icon: "lua",
+}
+
 const languages: Language[] = [
     Python,
     R,
@@ -55,6 +79,9 @@ const languages: Language[] = [
     CPP,
     JavaScript,
     Rust,
+    CSharp,
+    Kotlin,
+    Elixir,
 ]
 
 export function findLanguage(stub?: string | null): Language | null {

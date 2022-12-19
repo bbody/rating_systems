@@ -1,4 +1,3 @@
-
 type Language = {
     title: string,
     stub: string,
@@ -13,7 +12,7 @@ type Implementation = {
 
 type RatingSystem = {
     name: string,
-    stub: string,
+    stub: RatingSystemType,
     description: string,
     license: string,
     primary_use: string,

@@ -10,7 +10,7 @@ export default function SideBar({showSidebar, closeSidebar }: {showSidebar: bool
                     <div className="flex-1 flex flex-col pt-5 pb-4 overflow-y-auto">
                         <div className="flex-1 px-3 bg-white divide-y space-y-1">
                             <ul className="space-y-2 pb-2">
-                                <li>
+                                {/*<li>
                                     <form action="#" method="GET" className="lg:hidden">
                                         <label className="sr-only">Search</label>
                                         <div className="relative">
@@ -20,7 +20,7 @@ export default function SideBar({showSidebar, closeSidebar }: {showSidebar: bool
                                             <input type="text" name="email" id="mobile-search" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-cyan-600 focus:ring-cyan-600 block w-full pl-10 p-2.5" placeholder="Search" />
                                         </div>
                                     </form>
-                                </li>
+                                </li>*/}
                                 {languages.map((language) => (
                                     <LanguageSideBarItem key={language.stub} language={language} closeSidebar={closeSidebar}/>
                                 ))}
