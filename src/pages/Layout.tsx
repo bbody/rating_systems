@@ -8,11 +8,15 @@ export default function Layout() {
     const toggleSidebar = () => {
         setShowSidebar(!showSidebar)
     }
+    const closeSidebar = () => {
+        setShowSidebar(false)
+    }
+
     return (
         <>
             <NavBar showSidebarToggle={toggleSidebar} sidebarOpen={showSidebar} />
             <div className="flex overflow-hidden bg-white pt-16">
-                <SideBar showSidebar={showSidebar}/>
+                <SideBar showSidebar={showSidebar} closeSidebar={closeSidebar} />
                 <div id="main-content" className="h-full w-full bg-gray-50 relative overflow-y-auto lg:ml-64">
                     <main>
                         <Outlet />

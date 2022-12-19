@@ -2,7 +2,7 @@ import React, { Fragment } from "react"
 import languages from "../data/languages"
 import LanguageSideBarItem from "./LanguageSideBarItem"
 
-export default function SideBar({showSidebar}: {showSidebar: boolean}) {
+export default function SideBar({showSidebar, closeSidebar }: {showSidebar: boolean, closeSidebar: () => void}) {
     return (
         <Fragment>
             <aside id="sidebar" className={`fixed z-20 h-full top-0 left-0 pt-16 flex lg:flex flex-shrink-0 flex-col w-64 transition-width duration-75` + (showSidebar ? "" : " hidden")} aria-label="Sidebar">
@@ -22,14 +22,14 @@ export default function SideBar({showSidebar}: {showSidebar: boolean}) {
                                     </form>
                                 </li>
                                 {languages.map((language) => (
-                                    <LanguageSideBarItem key={language.stub} language={language} active={false}/>
+                                    <LanguageSideBarItem key={language.stub} language={language} closeSidebar={closeSidebar}/>
                                 ))}
                             </ul >
                         </div >
                     </div >
                 </div >
             </aside >
-            <div className={`bg-gray-900 opacity-50 fixed inset-0 z-10` + (showSidebar ? "" : " hidden")} id="sidebarBackdrop"></div>
+            <div onClick={closeSidebar} className={`bg-gray-900 opacity-50 fixed inset-0 z-10` + (showSidebar ? "" : " hidden")} id="sidebarBackdrop"></div>
         </Fragment >
     )
 }

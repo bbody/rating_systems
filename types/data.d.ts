@@ -8,7 +8,7 @@ type Language = {
 type Implementation = {
     title: string,
     link: string,
-    language: string
+    language: Language
 }
 
 type RatingSystem = {

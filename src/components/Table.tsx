@@ -1,26 +1,8 @@
 import React from 'react';
-import { ratingSystemsList } from '../data/rating_systems';
+import TableHead from './TableHead';
 import TableRow from './TableRow';
 
-function TableHead() {
-    return (
-        <thead className="border-b">
-            <tr>
-                <th scope="col" className="text-sm font-medium text-gray-900 px-6 py-4 text-left">
-                    Title
-                </th>
-                <th scope="col" className="text-sm font-medium text-gray-900 px-6 py-4 text-left">
-                    Description
-                </th>
-                <th scope="col" className="text-sm font-medium text-gray-900 px-6 py-4 text-left">
-                    More Details
-                </th>
-            </tr>
-        </thead>
-    )
-}
-
-export default function Table() {
+export default function Table({ ratingSystems }: { ratingSystems: RatingSystem[]}) {
     return <div className="flex flex-col">
         <div className="overflow-x-auto sm:-mx-6 lg:-mx-8">
             <div className="py-2 inline-block min-w-full sm:px-6 lg:px-8">
@@ -28,7 +10,7 @@ export default function Table() {
                     <table className="min-w-full">
                         <TableHead />
                         <tbody>
-                            {ratingSystemsList.map((ratingSystem) => (
+                            {ratingSystems.map((ratingSystem) => (
                                 <TableRow key={ratingSystem.name} ratingSystem={ratingSystem} />
                             ))}
                         </tbody>
